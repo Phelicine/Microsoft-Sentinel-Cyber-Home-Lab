@@ -37,7 +37,7 @@ High-level flow:
 •	Configured public IP access
 •	Enabled RDP (port 3389)
 •	Set a local administrator account for login
-![VM](screenshots/VM-Overview.png)
+![VM](screenshots/VM-overview.png)
 
 3️⃣ Intentionally Weak Security Configuration
 To simulate real-world attacks:
