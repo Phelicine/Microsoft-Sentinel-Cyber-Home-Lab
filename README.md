@@ -120,7 +120,6 @@ Used KQL to:
 - Exposed RDP services are rapidly attacked
 - Logging and visibility are critical for detection
 - Microsoft Sentinel provides powerful detection capabilities
-- Cloud SOC skills are highly transferable to real-world roles
 
 🚀 Future Improvements
 
