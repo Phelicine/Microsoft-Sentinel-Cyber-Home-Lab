@@ -30,7 +30,6 @@ High-level flow:
 •	Created a dedicated Resource Group for the SOC lab
 •	Deployed a Log Analytics Workspace
 •	Enabled Microsoft Sentinel on the workspace
-📸 Add screenshot of Azure Resource Group and Sentinel enabled
 ![Resource Group](screenshots/Resource-Group.png)
 
 2️⃣ Windows Virtual Machine Deployment
@@ -38,7 +37,6 @@ High-level flow:
 •	Configured public IP access
 •	Enabled RDP (port 3389)
 •	Set a local administrator account for login
-📸 Add screenshot of VM overview page
 ![VM](screenshots/VM-Overview.png)
 
 3️⃣ Intentionally Weak Security Configuration
@@ -46,7 +44,6 @@ To simulate real-world attacks:
 •	Network Security Group (NSG) allowed RDP from any source
 •	No IP restrictions were applied
 •	This made the VM visible to internet scanners and attackers
-📸 Add screenshot of NSG inbound rule allowing RDP
 ![NSG inbound rule](screenshots/NSG-inbound-RDP.png)
 ![NSG inbound rule](screenshots/NSG-inbound-rule2.png)
 ![NSG inbound rule](screenshots/NSG-inbound-rule3.png)
@@ -56,7 +53,6 @@ To simulate real-world attacks:
 •	Enabled Windows Security Events in Log Analytics
 •	Confirmed that failed login attempts (Event ID 4625) were being ingested
 •	Verified logs using KQL queries in Sentinel
-📸 Add screenshot of SecurityEvent logs in Sentinel
 ![Security Events](screenshots/securityevents.png)
 
 
@@ -64,14 +60,12 @@ To simulate real-world attacks:
 •	Left the VM exposed for several hours
 •	Observed multiple failed RDP login attempts
 •	Attacks originated from multiple global IP addresses
-📸 Add screenshot showing failed login events
 ![Failed logins](screenshots/failed-login-attempts.png)
 
 6️⃣ GeoIP Watchlist Setup
 •	Imported a GeoIP CSV as a Sentinel Watchlist
 •	Included country, city, latitude, longitude, and ASN data
 •	Used this data to enrich attacker IP addresses
-📸 Add screenshot of GeoIP watchlist configuration
 ![Watchlist config](screenshots/watchlist-config.png)
 
 7️⃣ KQL Detection Query
@@ -83,14 +77,13 @@ Example logic used:
 •	Event ID: 4625
 •	Logon Type: 3
 •	IPv4 lookup for geolocation enrichment
-📸 Add screenshot of KQL query results
 ![KQL Query](screenshots/KQL-query-res.png)
 
 8️⃣ Attack Map Visualization
 •	Created a Sentinel workbook
 •	Displayed attacker locations using latitude and longitude
 •	Visualized real-time attack sources on a world map
-📸 Add screenshot of attacker map here
+•	The attack map below is after I left my VM running for 7 hours. Be careful not to leave it on forever due to costs
 ![Attacker Map](screenshots/attack-map.png)
 
 9️⃣ Analysis & Findings
@@ -101,7 +94,6 @@ Example logic used:
 o	Network hardening
 o	Monitoring
 o	Centralized logging
-📸 Add screenshot of summarized attack statistics
 ![Attack statistics](screenshots/Attack-statistics.png)
 
 📊 Key Skills Demonstrated
