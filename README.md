@@ -133,7 +133,7 @@ Used KQL to:
 
 - /queries/ – KQL detection queries
 - /screenshots/ – Lab screenshots
-- /notes/ – Analysis and findings
+- /notes/ – Lessons learned
 - README.md – Project documentation
 
 👤 Author
