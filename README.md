@@ -23,16 +23,16 @@ High-level flow:
 5.	Sentinel analyzes and enriches logs
 6.	Attacker locations are visualized on a map
 ![Architecture Map](screenshots/Architecture-map.png)
-________________________________________
+
 🪜 Step-by-Step Project Breakdown
-________________________________________
+
 1️⃣ Azure Resource Setup
 •	Created a dedicated Resource Group for the SOC lab
 •	Deployed a Log Analytics Workspace
 •	Enabled Microsoft Sentinel on the workspace
 📸 Add screenshot of Azure Resource Group and Sentinel enabled
 ![Resource Group](screenshots/Resource-Group.png)
-________________________________________
+
 2️⃣ Windows Virtual Machine Deployment
 •	Deployed a Windows 10 VM in Azure
 •	Configured public IP access
@@ -40,7 +40,7 @@ ________________________________________
 •	Set a local administrator account for login
 📸 Add screenshot of VM overview page
 ![VM](screenshots/VM-Overview.png)
-________________________________________
+
 3️⃣ Intentionally Weak Security Configuration
 To simulate real-world attacks:
 •	Network Security Group (NSG) allowed RDP from any source
@@ -51,7 +51,7 @@ To simulate real-world attacks:
 ![NSG inbound rule](screenshots/NSG-inbound-rule2.png)
 ![NSG inbound rule](screenshots/NSG-inbound-rule3.png)
 
-________________________________________
+
 4️⃣ Log Collection Configuration
 •	Enabled Windows Security Events in Log Analytics
 •	Confirmed that failed login attempts (Event ID 4625) were being ingested
@@ -59,7 +59,7 @@ ________________________________________
 📸 Add screenshot of SecurityEvent logs in Sentinel
 ![Security Events](screenshots/securityevents.png)
 
-________________________________________
+
 5️⃣ Simulating Attacks
 •	Left the VM exposed for several hours
 •	Observed multiple failed RDP login attempts
@@ -67,7 +67,6 @@ ________________________________________
 📸 Add screenshot showing failed login events
 ![Failed logins](screenshots/failed-login-attempts.png)
 
-________________________________________
 6️⃣ GeoIP Watchlist Setup
 •	Imported a GeoIP CSV as a Sentinel Watchlist
 •	Included country, city, latitude, longitude, and ASN data
@@ -75,7 +74,6 @@ ________________________________________
 📸 Add screenshot of GeoIP watchlist configuration
 ![Watchlist config](screenshots/watchlist-config.png)
 
-________________________________________
 7️⃣ KQL Detection Query
 Used KQL to:
 •	Filter failed login attempts
@@ -88,7 +86,6 @@ Example logic used:
 📸 Add screenshot of KQL query results
 ![KQL Query](screenshots/KQL-query-res.png)
 
-________________________________________
 8️⃣ Attack Map Visualization
 •	Created a Sentinel workbook
 •	Displayed attacker locations using latitude and longitude
@@ -96,7 +93,6 @@ ________________________________________
 📸 Add screenshot of attacker map here
 ![Attacker Map](screenshots/attack-map.png)
 
-________________________________________
 9️⃣ Analysis & Findings
 •	The VM received continuous brute-force attempts
 •	Attacks originated from multiple countries
@@ -108,7 +104,6 @@ o	Centralized logging
 📸 Add screenshot of summarized attack statistics
 ![Attack statistics](screenshots/Attack-statistics.png)
 
-________________________________________
 📊 Key Skills Demonstrated
 •	Cloud security monitoring
 •	Log ingestion and analysis
@@ -117,25 +112,25 @@ ________________________________________
 •	GeoIP enrichment
 •	SOC-style investigation workflow
 •	Azure cost management (deploy → test → delete)
-________________________________________
+
 💡 Lessons Learned
 •	Exposed RDP services are rapidly attacked
 •	Logging and visibility are critical for detection
 •	Microsoft Sentinel provides powerful detection capabilities
 •	Cloud SOC skills are highly transferable to real-world roles
-________________________________________
+
 🚀 Future Improvements
 •	Add alert rules for brute-force detection
 •	Integrate Microsoft Defender for Endpoint
 •	Automate incident response with Logic Apps
 •	Harden NSGs and compare before/after attack data
-________________________________________
+
 📁 Repository Contents
 •	/queries/ – KQL detection queries
 •	/screenshots/ – Lab screenshots
 •	/notes/ – Analysis and findings
 •	README.md – Project documentation
-________________________________________
+
 👤 Author
 Phelicine Opetu
 Aspiring SOC / Cyber Security Analyst
