@@ -22,7 +22,7 @@ High-level flow:
 4.	Logs are sent to Log Analytics
 5.	Sentinel analyzes and enriches logs
 6.	Attacker locations are visualized on a map
-![Attacker Map](screenshots/attack map.png)
+![Attacker Map](screenshots/attack-map.png)
 ________________________________________
 🪜 Step-by-Step Project Breakdown
 ________________________________________
