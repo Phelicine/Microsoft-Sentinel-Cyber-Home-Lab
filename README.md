@@ -22,7 +22,7 @@ High-level flow:
 4.	Logs are sent to Log Analytics
 5.	Sentinel analyzes and enriches logs
 6.	Attacker locations are visualized on a map
-![Attacker Map](screenshots/attack-map.png)
+![Architecture Map](screenshots/Architecture-map.png)
 ________________________________________
 🪜 Step-by-Step Project Breakdown
 ________________________________________
@@ -31,6 +31,7 @@ ________________________________________
 •	Deployed a Log Analytics Workspace
 •	Enabled Microsoft Sentinel on the workspace
 📸 Add screenshot of Azure Resource Group and Sentinel enabled
+![Resource Group](screenshots/Resource-Group.png)
 ________________________________________
 2️⃣ Windows Virtual Machine Deployment
 •	Deployed a Windows 10 VM in Azure
@@ -38,6 +39,7 @@ ________________________________________
 •	Enabled RDP (port 3389)
 •	Set a local administrator account for login
 📸 Add screenshot of VM overview page
+![VM](screenshots/VM-Overview.png)
 ________________________________________
 3️⃣ Intentionally Weak Security Configuration
 To simulate real-world attacks:
@@ -45,24 +47,34 @@ To simulate real-world attacks:
 •	No IP restrictions were applied
 •	This made the VM visible to internet scanners and attackers
 📸 Add screenshot of NSG inbound rule allowing RDP
+![NSG inbound rule](screenshots/NSG-inbound-RDP.png)
+![NSG inbound rule](screenshots/NSG-inbound-rule2.png)
+![NSG inbound rule](screenshots/NSG-inbound-rule3.png)
+
 ________________________________________
 4️⃣ Log Collection Configuration
 •	Enabled Windows Security Events in Log Analytics
 •	Confirmed that failed login attempts (Event ID 4625) were being ingested
 •	Verified logs using KQL queries in Sentinel
 📸 Add screenshot of SecurityEvent logs in Sentinel
+![Security Events](screenshots/securityevents.png)
+
 ________________________________________
 5️⃣ Simulating Attacks
 •	Left the VM exposed for several hours
 •	Observed multiple failed RDP login attempts
 •	Attacks originated from multiple global IP addresses
 📸 Add screenshot showing failed login events
+![Failed logins](screenshots/failed-login-attempts.png)
+
 ________________________________________
 6️⃣ GeoIP Watchlist Setup
 •	Imported a GeoIP CSV as a Sentinel Watchlist
 •	Included country, city, latitude, longitude, and ASN data
 •	Used this data to enrich attacker IP addresses
 📸 Add screenshot of GeoIP watchlist configuration
+![Watchlist config](screenshots/watchlist-config.png)
+
 ________________________________________
 7️⃣ KQL Detection Query
 Used KQL to:
@@ -71,15 +83,19 @@ Used KQL to:
 •	Enrich data using the GeoIP watchlist
 Example logic used:
 •	Event ID: 4625
-•	Logon Type: 10 (RDP)
+•	Logon Type: 3
 •	IPv4 lookup for geolocation enrichment
 📸 Add screenshot of KQL query results
+![KQL Query](screenshots/KQL-query-res.png)
+
 ________________________________________
 8️⃣ Attack Map Visualization
 •	Created a Sentinel workbook
 •	Displayed attacker locations using latitude and longitude
 •	Visualized real-time attack sources on a world map
 📸 Add screenshot of attacker map here
+![Attacker Map](screenshots/attack-map.png)
+
 ________________________________________
 9️⃣ Analysis & Findings
 •	The VM received continuous brute-force attempts
@@ -90,6 +106,8 @@ o	Network hardening
 o	Monitoring
 o	Centralized logging
 📸 Add screenshot of summarized attack statistics
+![Attack statistics](screenshots/Attack-statistics.png)
+
 ________________________________________
 📊 Key Skills Demonstrated
 •	Cloud security monitoring
