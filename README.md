@@ -139,4 +139,4 @@ Used KQL to:
 Phelicine Opetu
 Aspiring SOC / Cyber Security Analyst
 Azure • Sentinel • SIEM • Detection Engineering
-Thanks to Josh Makador youtube video for in depth guidance and resources which cane be found at [Link text]([https://example.com](https://www.youtube.com/watch?v=g5JL2RIbThM)
+Thanks to Josh Makador's youtube video for in depth guidance and resources which can be found at [Link text](https://www.youtube.com/watch?v=g5JL2RIbThM)
