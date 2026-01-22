@@ -1,6 +1,6 @@
 🛡️ Cyber Security Home SOC Lab – Microsoft Sentinel
 - 📌 Project Overview
-This project demonstrates how to build a home Security Operations Center (SOC) using Microsoft Azure and Microsoft Sentinel. The lab simulates real-world attacks against a Windows virtual machine, collects security logs, enriches them with GeoIP data, and visualizes attacker activity on a live map.
+- This project demonstrates how to build a home Security Operations Center (SOC) using Microsoft Azure and Microsoft Sentinel. The lab simulates real-world attacks against a Windows virtual machine, collects security logs, enriches them with GeoIP data, and visualizes attacker activity on a live map.
 The goal of this project was to gain hands-on experience with cloud security monitoring, log analysis, and threat detection, similar to a Tier 1 SOC analyst role.
 
 🧰 Tools & Technologies Used
@@ -139,3 +139,4 @@ Used KQL to:
 Phelicine Opetu
 Aspiring SOC / Cyber Security Analyst
 Azure • Sentinel • SIEM • Detection Engineering
+Thanks to Josh Makador youtube video for in depth guidance and resources which cane be found at [Link text]([https://example.com](https://www.youtube.com/watch?v=g5JL2RIbThM)
